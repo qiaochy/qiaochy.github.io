@@ -1,562 +1,536 @@
 <!DOCTYPE html>
-<html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
 <head>
-  <meta charset="utf-8">
-  
   <title>Qiaochy</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Qiaochy">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Qiaochy">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qiaochy">
-  
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Qiaochy">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
     <link rel="alternate" href="/atom.xml" title="Qiaochy" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+    
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
   
 
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Qiaochy</a>
-      </h1>
-      
+<!--
+<body class="home-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
     </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Qiaochy</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+
+      <!-- ============================ Hero Image =========================== -->
+
+<section id="hero" class="scrollme">
+    <div class="container-fluid element-img" style="background: url(/img/bg_img.jpg) no-repeat center center fixed;background-size: cover">
+        <div class="row">
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                    <div>
+                        
+                        <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                        <p></p>
+                        
+                        <h2></h2>
+                        <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+                        
+
+                    </div>
+                </div>
+            </div>
+            <!-- // .col-md-12 -->
+        </div>
+        <div class="herofade beige-dk"></div>
     </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-linux安装memcache以及分布式缓存" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/12/linux安装memcache以及分布式缓存/" class="article-date">
-  <time datetime="2017-02-12T12:02:26.000Z" itemprop="datePublished">2017-02-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/12/linux安装memcache以及分布式缓存/">linux安装memcache以及分布式缓存</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>安装 Memcached<br>自动安装<br>Ubuntu/Debian<br>sudo apt-get install memcached<br>Redhat/Fedora/Centos<br>yum install memcached<br>FreeBSD<br>portmaster databases/memcached<br>源代码安装<br>从其官方网站（<a href="http://memcached.org）下载memcached最新版本。" target="_blank" rel="external">http://memcached.org）下载memcached最新版本。</a><br>wget <a href="http://memcached.org/latest" target="_blank" rel="external">http://memcached.org/latest</a>                    下载最新版本</p>
-<p>tar -zxvf memcached-1.x.x.tar.gz                    解压源码</p>
-<p>cd memcached-1.x.x                                  进入目录</p>
-<p>./configure –prefix=/usr/local/memcached           配置</p>
-<p>make &amp;&amp; make test                                   编译</p>
-<p>sudo make install                                   安装<br>Memcached 运行<br>Memcached命令的运行：<br>$ /usr/local/memcached/bin/memcached -h                           命令帮助<br>注意：如果使用自动安装 memcached 命令位于 /usr/local/bin/memcached。<br>启动选项：<br>-d是启动一个守护进程；<br>-m是分配给Memcache使用的内存数量，单位是MB；<br>-u是运行Memcache的用户；<br>-l是监听的服务器IP地址，可以有多个地址；<br>-p是设置Memcache监听的端口，，最好是1024以上的端口；<br>-c是最大运行的并发连接数，默认是1024；<br>-P是设置保存Memcache的pid文件。<br>（1）作为前台程序运行：<br>从终端输入以下命令，启动memcached:<br>/usr/local/memcached/bin/memcached -p 11211 -m 64m -vv</p>
-<p>slab class   1: chunk size     88 perslab 11915</p>
-<p>slab class   2: chunk size    112 perslab  9362</p>
-<p>slab class   3: chunk size    144 perslab  7281</p>
-<p>中间省略</p>
-<p>slab class  38: chunk size 391224 perslab     2</p>
-<p>slab class  39: chunk size 489032 perslab     2</p>
-<p>&lt;23 server listening</p>
-<p>&lt;24 send buffer was 110592, now 268435456</p>
-<p>&lt;24 server listening (udp)</p>
-<p>&lt;24 server listening (udp)</p>
-<p>&lt;24 server listening (udp)</p>
-<p>&lt;24 server listening (udp)<br>这里显示了调试信息。这样就在前台启动了memcached，监听TCP端口11211，最大内存使用量为64M。调试信息的内容大部分是关于存储的信息。<br>（2）作为后台服务程序运行：</p>
-<h1 id="usr-local-memcached-bin-memcached-p-11211-m-64m-d"><a href="#usr-local-memcached-bin-memcached-p-11211-m-64m-d" class="headerlink" title="/usr/local/memcached/bin/memcached -p 11211 -m 64m -d"></a>/usr/local/memcached/bin/memcached -p 11211 -m 64m -d</h1><p>或者</p>
-<p>/usr/local/memcached/bin/memcached-d-m64M-u<br> root-l192.168.0.200-p11211-c256-P/tmp/memcached.pid</p>
-<p>ps：开启memcache多服务时不能用root用户 </p>
-<p>/usr/local/memcached/bin/memcached -u nobody -p 11211 -m 64m -d<br>分布式缓存测试<br>新建set.php</p>
-<p>新建get.php</p>
-<p>分别连接三个服务器结果<br>11211</p>
-<p>11213</p>
-<p>11214</p>
-<p>三个服务端存入了不同的值 that is ok！</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/12/linux安装memcache以及分布式缓存/" data-id="ciz2nsr3h0003snmq5dr0sst1" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-curl模拟" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/12/curl模拟/" class="article-date">
-  <time datetime="2017-02-12T11:59:24.000Z" itemprop="datePublished">2017-02-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/12/curl模拟/">curl模拟</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>header(‘content-type:text/html;charset=utf-8’);<br>function curlPost($url,$data,$method){<br>    $ch = curl_init();   //1.初始化<br>    curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址<br>    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);//3.请求方式<br>    //4.参数如下<br>    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);//https<br>    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>    curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)’);//模拟浏览器<br>    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>    curl_setopt($ch, CURLOPT_AUTOREFERER, 1);<br>        curl_setopt($ch, CURLOPT_HTTPHEADER,array(‘Accept-Encoding: gzip, deflate’));//gzip解压内容<br>        curl_setopt($ch, CURLOPT_ENCODING, ‘gzip,deflate’);  </p>
-<pre><code>if($method==&quot;POST&quot;){//5.post方式的时候添加数据  
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  
-}  
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
-$tmpInfo = curl_exec($ch);//6.执行  
-
-if (curl_errno($ch)) {//7.如果出错  
-    return curl_error($ch);  
-}  
-curl_close($ch);//8.关闭  
-return $tmpInfo;  
-</code></pre><p>}<br>$data=array(‘name’ =&gt; ‘1234’);<br>$url=”<a href="http://www.sohu.com/" target="_blank" rel="external">http://www.sohu.com/</a>“;  </p>
-<p>$method=”GET”;<br>$file=curlPost($url,$data,$method);<br>$file=mb_convert_encoding($file,’UTF-8’,’GBK’);<br>echo $file;  </p>
-<p>当cookie认证登陆的时候<br>[php] view plain copy  在CODE上查看代码片派生到我的代码片<br>&lt;?php<br>    $cookie_file = tempnam(‘./temp’,’cookie’);<br>    function weixinPost($url,$data,$method,$setcooke=false,$cookie_file=false){<br>        $ch = curl_init();   //1.初始化<br>        curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址<br>        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);//3.请求方式<br>        //4.参数如下<br>        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);<br>        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>        curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)’);<br>        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>        curl_setopt($ch, CURLOPT_AUTOREFERER, 1);  </p>
-<pre><code>    if($method==&quot;POST&quot;){//5.post方式的时候添加数据     
-        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  
-    }  
-    if($setcooke==true){  
-        curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_file);  
-    }else{  
-        curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_file);  
-    }  
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
-    $tmpInfo = curl_exec($ch);//6.执行  
-
-    if (curl_errno($ch)) {//7.如果出错  
-        return curl_error($ch);  
-    }  
-    curl_close($ch);//8.关闭  
-    return $tmpInfo;  
-}  
-$data=array(&apos;username&apos; =&gt; &apos;***&apos;,&apos;password&apos;=&gt;&apos;***&apos;);  
-$url=&quot;http://www.xinxinj.com/login.php&quot;;  
-$method=&quot;POST&quot;;  
-$file=weixinPost($url,$data,$method,true,$cookie_file);  
-echo $file;  
-
-$url=&quot;http://www.xinxinj.com/admin.php&quot;;  
-$method=&quot;GET&quot;;  
-$file=weixinPost($url,$data,$method,false,$cookie_file);  
-echo $file;  
-</code></pre><p>?&gt;  </p>
-<p>如果上述还是无法解决，那么采用以下方案<br>[php] view plain copy  在CODE上查看代码片派生到我的代码片<br>$ch = curl_init();<br>$url = ‘<strong><em>*</em></strong>‘;<br>$header = array(<br>‘cookie:<strong><em>**</em></strong>‘<br>);<br>// 添加apikey到header<br>curl_setopt($ch, CURLOPT_HTTPHEADER  , $header);<br>//curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);<br>curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0’);<br>curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>curl_setopt($ch, CURLOPT_AUTOREFERER, 1);<br>// 执行HTTP请求<br>curl_setopt($ch , CURLOPT_URL , $url);<br>$res = curl_exec($ch);<br>var_dump($res);    </p>
-<p>上面的$header中的数组中cookie的内容是现在浏览器登录，然后打开控制台，把cookie的信息粘贴进来</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/12/curl模拟/" data-id="ciz2nsr370001snmqrc1t75gc" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-php通过拓展ssh2控制linux" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/12/php通过拓展ssh2控制linux/" class="article-date">
-  <time datetime="2017-02-12T11:56:56.000Z" itemprop="datePublished">2017-02-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/12/php通过拓展ssh2控制linux/"> php通过拓展ssh2控制linux</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>注意：我们用PHP来控制Linux，PHP环境可以在windows也可以在Linux，但是我们要控制的机器是一台linux（被控制的linux关闭selinux和firewalld）。<br>如果php在linux，不会安装没关系，可以参考安装lamp教程地址：  <a href="http://blog.csdn.NET/zph1234/article/details/51248124" target="_blank" rel="external">http://blog.csdn.NET/zph1234/article/details/51248124</a><br>然后我们的php环境要想实现控制linux，必须安装php的一个扩展ssh2<br>0.下载ssh2扩展，从<a href="http://pecl.php.net/package/ssh2，有linux扩展包，也有windows的dll，如果是php5安装ssh2-0.13或0.12扩展,php7安装1.0" target="_blank" rel="external">http://pecl.php.net/package/ssh2，有linux扩展包，也有windows的dll，如果是php5安装ssh2-0.13或0.12扩展,php7安装1.0</a><br>1.windows中的php安装扩展，需要下载dll文件，在php.ini中引入即可<br>2.这里是centos中的php安装ssh2扩展，记得关闭selinux和firewalld<br>yum install libssh2 libssh2-devel php-devel gcc-c++<br>3.如果是php5安装ssh2-0.13扩展,php7安装1.0<br>cd ssh2-0.13/<br>/usr/bin/phpize<br>./configure –with-php-config=/usr/bin/php-config LIBS=-ldl<br>make<br>make install</p>
-<ol>
-<li>vi /etc/php.ini<br>加入extension=ssh2.so<br>5.重启apache<br>6.vi test.php<br>[php] view plain copy  在CODE上查看代码片派生到我的代码片<br>&lt;?php  </li>
-</ol>
-<p>$host=’127.0.0.1’;//被控制的linux的ip  </p>
-<p>$user=’root’;//用户名  </p>
-<p>$passwd=’123456’;//密码  </p>
-<p>// 链接远程服务器  </p>
-<p>$connection = ssh2_connect($host, 22);  </p>
-<p>if (!$connection) die(‘connection to ‘.$host.’:22 failed’);  </p>
-<p>echo ‘connection OK<br>‘;  </p>
-<p>// 获取验证方式并打印  </p>
-<p>$auth_methods = ssh2_auth_none($connection, $user);  </p>
-<p>print_r( $auth_methods.’<br>‘);  </p>
-<p>if (in_array(‘password’, $auth_methods ))<br>{  </p>
-<pre><code>// 通过password方式登录远程服务器  
-
-if (ssh2_auth_password($connection, $user, $passwd))  
-
-{  
-
-    echo $user.&apos; login OK&lt;br/&gt;&apos;;  
-
-    $stream = ssh2_exec($connection, &quot;pwd&quot;); // 执行php  
-
-    stream_set_blocking($stream, true); // 获取执行pwd后的内容  
-
-     if ($stream === FALSE) die(&quot;pwd failed&quot;);  
-
-    echo &apos;pwd: &apos;.stream_get_contents($stream).&apos;&lt;br/&gt;&apos;;  
-
-}  
-
-else  
-
-{  
-
-    die( $user.&apos; login Failed&lt;br/&gt;&apos;);  
-
-}  
-</code></pre><p>}<br>上面只是测试，下面是控制mysql服务开启关闭的代码部分<br>c.php<br>&lt;?php<br>header(“content-type:text/html;charset=utf8”);<br>$str=”systemctl status mysql.service “;<br>//$str=”pwd”;<br>$host=’<strong><strong>*</strong></strong>‘;//被控制的linux的ip<br>$user=’<strong>*</strong>‘;//用户名<br>$passwd=’<strong>**</strong>‘;//密码<br>// 链接远程服务器<br>$connection = ssh2_connect($host, 22);<br>/<em>if (!$connection) die(‘connection to ‘.$host.’:22 failed’);<br>echo ‘connection OK<br>‘;</em>/<br>// 获取验证方式并打印<br>$auth_methods = ssh2_auth_none($connection, $user);<br>if (in_array(‘password’, $auth_methods ))<br>{<br>    // 通过password方式登录远程服务器<br>    if (ssh2_auth_password($connection, $user, $passwd))<br>    {<br>        /<em>echo $user.’ login OK<br>‘;</em>/<br>        $stream = ssh2_exec($connection, $str); // 执行php<br>        $pwd=stream_set_blocking($stream, true);<br>//        var_dump($pwd);<br>        // 获取执行pwd后的内容<br>        $pwd1=stream_get_contents($stream);<br>//        print_r($pwd1);<br>        $a=strpos($pwd1,’running’);<br>//        var_dump($a);<br>        if($a)<br>        {<br>            $b=’running’;<br>            $st=”systemctl stop mysql.service”;<br>        }else<br>        {<br>            $b=’dead’;<br>            $st=”systemctl start mysql.service”;<br>        }<br>//        $stream = ssh2_exec($connection, $st); // 执行php<br>        /<em> $pwd=stream_set_blocking($stream, true); // 获取执行pwd后的内容<br>         if ($stream === FALSE) die(“pwd failed”);<br>         echo ‘pwd: ‘.stream_get_contents($stream).’<br>‘;</em>/<br>    }<br>    else<br>    {<br>        die( $user.’ login Failed<br>‘);<br>    }<br>}</p>
-<p>?&gt;<br>&lt;!doctype html&gt;</p>
-<p><html lang="en"></html></p>
-<p><head><br>    <meta charset="UTF-8"><br>    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><br>    <meta http-equiv="X-UA-Compatible" content="ie=edge"><br>    <title>Document</title><br></head></p>
-<p><body></body></p>
-<p><table border="1"><br>    <tr><br>        <td>主机昵称</td><br>        <td>ip地址</td><br>        <td>mysql服务状态</td><br>        <td>操作</td><br>    </tr><br>    <tr><br>        <td>我的阿里云</td><br>        <td><strong><strong>**</strong></strong></td><br>        <td>&lt;?=$b?&gt;</td><br>        <td><br>            &lt;?php if($b==’dead’){?&gt;<br>                <a href="d.php?st=<?=$st?>">开启</a><br>            &lt;?php }else{?&gt;<br>                <a href="d.php?st=<?=$st?>">关闭</a><br>            &lt;?php }?&gt;<br>        </td><br>    </tr><br></table><br><br><br>d.php<br>&lt;?php<br>header(“content-type:text/html;charset=utf8”);<br>$st=$_GET[‘st’];<br>$str=”systemctl status mysql.service “;<br>//$str=”pwd”;<br>$host=’127.0.0.1’;//被控制的linux的ip<br>$user=’root’;//用户名<br>$passwd=’Xg10086212!@#’;//密码<br>// 链接远程服务器<br>$connection = ssh2_connect($host, 22);<br>$auth_methods = ssh2_auth_none($connection, $user);<br>if (in_array(‘password’, $auth_methods ))<br>{<br>    // 通过password方式登录远程服务器<br>    if (ssh2_auth_password($connection, $user, $passwd))<br>    {<br>        /<em>echo $user.’ login OK<br>‘;</em>/<br>        $stream = ssh2_exec($connection, $str); // 执行php<br>        $pwd=stream_set_blocking($stream, true);<br>//        var_dump($pwd);<br>        // 获取执行pwd后的内容<br>        $pwd1=stream_get_contents($stream);<br>//        print_r($pwd1);</p>
-<pre><code>    $stream = ssh2_exec($connection, $st); // 执行php
-    /* $pwd=stream_set_blocking($stream, true); // 获取执行pwd后的内容
-     if ($stream === FALSE) die(&quot;pwd failed&quot;);
-     echo &apos;pwd: &apos;.stream_get_contents($stream).&apos;&lt;br/&gt;&apos;;*/
-}
-else
-{
-    die( $user.&apos; login Failed&lt;br/&gt;&apos;);
-}
-</code></pre><p>}</p>
-<p>$stream = ssh2_exec($connection, $st); // 执行php<br>header(“Location:c.php”);</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/12/php通过拓展ssh2控制linux/" data-id="ciz2nsr3j0004snmq6l3u3bff" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-CentOS-7安装Etherpad-在线协作编辑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/" class="article-date">
-  <time datetime="2017-02-11T08:57:46.000Z" itemprop="datePublished">2017-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/">CentOS 7安装Etherpad(在线协作编辑)</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Etherpad 是一个线上共制平台，是基于网络的实时合作文档编辑器，三、四个人可以坐在自己电脑前，同时对一份文档修改，也同时能看到其他人的修改。</p>
-<p>CentOS 7 安装 Etherpad</p>
-<p>1、先安装一些工具</p>
-<h1 id="yum-install-curl-vim-gcc-c-make"><a href="#yum-install-curl-vim-gcc-c-make" class="headerlink" title="yum install curl vim gcc-c++ make"></a>yum install curl vim gcc-c++ make</h1><p>2、安装MariaDB(mysql也是可以的)</p>
-<h1 id="yum-install-mariadb-server"><a href="#yum-install-mariadb-server" class="headerlink" title="yum install mariadb-server"></a>yum install mariadb-server</h1><p>启动MariaDB服务：</p>
-<h1 id="systemctl-start-mariadb-service"><a href="#systemctl-start-mariadb-service" class="headerlink" title="systemctl start mariadb.service"></a>systemctl start mariadb.service</h1><h1 id="systemctl-enable-mariadb-service"><a href="#systemctl-enable-mariadb-service" class="headerlink" title="systemctl enable mariadb.service"></a>systemctl enable mariadb.service</h1><p>运行MariaDB初始化脚本：</p>
-<h1 id="mysql-secure-installation"><a href="#mysql-secure-installation" class="headerlink" title="mysql_secure_installation"></a>mysql_secure_installation</h1><p>Mariadb初始密码为空；</p>
-<p>3、为Etherpad创建一个数据库和用户</p>
-<h1 id="mysql-u-root-p"><a href="#mysql-u-root-p" class="headerlink" title="mysql -u root -p"></a>mysql -u root -p</h1><p>MariaDB [(none)]&gt; CREATE DATABASE etherpad;<br>MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON etherpad.* TO ‘etherpad’@’localhost’ IDENTIFIED BY ‘test1234’;<br>MariaDB [(none)]&gt; FLUSH PRIVILEGES;<br>MariaDB [(none)]&gt; \q<br>创建数据库etherpad；用户etherpad，密码test1234。</p>
-<p>4、安装Node.js</p>
-<h1 id="curl-sL-https-rpm-nodesource-com-setup-sudo-bash"><a href="#curl-sL-https-rpm-nodesource-com-setup-sudo-bash" class="headerlink" title="curl -sL https://rpm.nodesource.com/setup | sudo bash -"></a>curl -sL <a href="https://rpm.nodesource.com/setup" target="_blank" rel="external">https://rpm.nodesource.com/setup</a> | sudo bash -</h1><h1 id="yum-install-nodejs"><a href="#yum-install-nodejs" class="headerlink" title="yum install nodejs"></a>yum install nodejs</h1><p>查看nodejs版本：</p>
-<h1 id="node-–version"><a href="#node-–version" class="headerlink" title="node –version"></a>node –version</h1><p>5、创建一个Linux用户</p>
-<h1 id="adduser-–home-opt-etherpad-–shell-bin-bash-etherpad"><a href="#adduser-–home-opt-etherpad-–shell-bin-bash-etherpad" class="headerlink" title="adduser –home /opt/etherpad –shell /bin/bash etherpad"></a>adduser –home /opt/etherpad –shell /bin/bash etherpad</h1><h1 id="install-d-m-755-o-etherpad-g-etherpad-opt-etherpad"><a href="#install-d-m-755-o-etherpad-g-etherpad-opt-etherpad" class="headerlink" title="install -d -m 755 -o etherpad -g etherpad /opt/etherpad"></a>install -d -m 755 -o etherpad -g etherpad /opt/etherpad</h1><p>6、安装Etherpad<br>切换到新用户：</p>
-<h1 id="su-etherpad"><a href="#su-etherpad" class="headerlink" title="su - etherpad"></a>su - etherpad</h1><p>使用git clone源码：<br>$ cd<br>$ git clone <a href="https://github.com/ether/etherpad-lite" target="_blank" rel="external">https://github.com/ether/etherpad-lite</a><br>创建配置文件：<br>$ cp ~/etherpad-lite/settings.json.template ~/etherpad-lite/settings.json<br>编辑settings.json文件：<br>$ sudo vim ~/etherpad-lite/settings.json<br>如果你要使用Nginx做反向代理，把“ip”: “0.0.0.0” 改为 “ip”: “127.0.0.1”，trustProxy设置为true。<br>注释掉”dbType” : “dirty”。<br>数据库配置：<br>“dbType” : “mysql”,<br>“dbSettings” : {<br>“user”    : “etherpad”,<br>“host”    : “localhost”,<br>“password”: “test1234”,<br>“database”: “etherpad”<br>},<br>添加管理员用户：<br>“users”: {<br>“admin”: {<br>“password”: “admin123”,<br>“is_admin”: true<br>}<br>},<br>保存退出。<br>安装依赖：<br>$ ~/etherpad-lite/bin/installDeps.sh<br>启动Etherpad：<br>$ ~/etherpad-lite/bin/run.sh</p>
-<p>使用浏览器访问：your_server_ip:9001</p>
-<p>创建新文档（New Pad），（链接：<a href="http://your_ip:9001/p/r5Lc37e42P）：" target="_blank" rel="external">http://your_ip:9001/p/r5Lc37e42P）：</a></p>
-<p>把链接发送给合作伙伴，协作编写同一个文档。每个人编辑的文本会使用不用的颜色，非常方便区分。</p>
-<p>7、后续配置<br>把etherpad注册为系统服务<br>使用Nginx做反向代理（域名-&gt;127.0.0.1:9001）</p>
-<p>本文永久更新地址：<a href="http://www.linuxdiyf.com/linux/22391.html" target="_blank" rel="external">http://www.linuxdiyf.com/linux/22391.html</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/" data-id="ciz2nsr2v0000snmqh5w6m98g" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-我的blog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/11/我的blog/" class="article-date">
-  <time datetime="2017-02-11T08:50:30.000Z" itemprop="datePublished">2017-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/11/我的blog/">我的blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>开始喽</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/我的blog/" data-id="ciz2nsr3z0006snmqvzj773sr" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/11/hello-world/" class="article-date">
-  <time datetime="2017-02-11T08:13:38.214Z" itemprop="datePublished">2017-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/hello-world/" data-id="ciz2nsr3c0002snmqwwzs3r4w" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-sql语句题-关于-sum，avg，min" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/01/12/sql语句题-关于-sum，avg，min/" class="article-date">
-  <time datetime="2017-01-12T12:05:43.000Z" itemprop="datePublished">2017-01-12</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/01/12/sql语句题-关于-sum，avg，min/">sql语句题 关于 sum，avg，min</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p> 1.查询各科最高分<br>select xueke,MAX(scode) from student GROUP BY xueke<br>2.查询总分前三名<br>select name,SUM(scode) FROM student GROUP BY name ORDER BY SUM(scode) desc limit 3<br>3.查询平均分前三名<br>select name,AVG(scode) from student GROUP BY name ORDER BY AVG(scode) desc limit 3<br>4.查询各科均及格的学生<br>SELECT MIN(scode) as mins,name from student GROUP BY name HAVING mins&gt;=60</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/01/12/sql语句题-关于-sum，avg，min/" data-id="ciz2nsr3p0005snmqe3202u9v" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
 </section>
+
+<!-- Height spacing helper -->
+<div class="heightblock"></div>
+<!-- // End height spacing helper -->
+
+<!-- ============================ END Hero Image =========================== -->
+<!-- ============================ Content =========================== -->
+
+<section id="intro">
+    <div class="container">
         
-          <aside id="sidebar">
-  
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/02/12/linux安装memcache以及分布式缓存/">linux安装memcache以及分布式缓存</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-02-12T12:02:26.000Z" itemprop="datePublished">
+          2017-02-12
+      </time>
     
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        安装 Memcached自动安装Ubuntu/Debiansudo apt-get install memcachedRedhat/Fedora/Centosyum install memcachedFreeBSDportmaster databases/memcached源代码安装从其官方网站（http://memcached.org）下载memcached最新版本。wget http://memcached.org/latest  
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/02/12/linux安装memcache以及分布式缓存/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/02/12/curl模拟/">curl模拟</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-02-12T11:59:24.000Z" itemprop="datePublished">
+          2017-02-12
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        header(‘content-type:text/html;charset=utf-8’);function curlPost($url,$data,$method){    $ch = curl_init();   //1.初始化    curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);/
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/02/12/curl模拟/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/02/12/php通过拓展ssh2控制linux/"> php通过拓展ssh2控制linux</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-02-12T11:56:56.000Z" itemprop="datePublished">
+          2017-02-12
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        注意：我们用PHP来控制Linux，PHP环境可以在windows也可以在Linux，但是我们要控制的机器是一台linux（被控制的linux关闭selinux和firewalld）。如果php在linux，不会安装没关系，可以参考安装lamp教程地址：  http://blog.csdn.NET/zph1234/article/details/51248124然后我们的php环境要想实现控制linux，必须安装php的一个扩展ssh2
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/02/12/php通过拓展ssh2控制linux/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/">CentOS 7安装Etherpad(在线协作编辑)</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-02-11T08:57:46.000Z" itemprop="datePublished">
+          2017-02-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Etherpad 是一个线上共制平台，是基于网络的实时合作文档编辑器，三、四个人可以坐在自己电脑前，同时对一份文档修改，也同时能看到其他人的修改。
+CentOS 7 安装 Etherpad
+1、先安装一些工具
+yum install curl vim gcc-c++ make2、安装MariaDB(mysql也是可以的)
+yum install mariadb-server启动MariaDB服务：
+systemctl start mar
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/02/11/我的blog/">我的blog</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-02-11T08:50:30.000Z" itemprop="datePublished">
+          2017-02-11
+      </time>
+    
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        开始喽
 
-  
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/02/11/我的blog/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/02/11/hello-world/">Hello World</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-02-11T08:13:38.214Z" itemprop="datePublished">
+          2017-02-11
+      </time>
     
-
-  
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                        Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Quick StartCreate a new p
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/02/11/hello-world/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 opening-statement">
+                <div class="col-md-4">
+                    <h3><a href="/2017/01/12/sql语句题-关于-sum，avg，min/">sql语句题 关于 sum，avg，min</a></h3>
+                    <span>
+                        <span class="post-meta">
+      <time datetime="2017-01-12T12:05:43.000Z" itemprop="datePublished">
+          2017-01-12
+      </time>
     
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/01/">January 2017</a></li></ul>
+</span>
+                    </span>
+                </div>
+                <div class="col-md-8">
+                    <p>
+                      
+                         1.查询各科最高分select xueke,MAX(scode) from student GROUP BY xueke2.查询总分前三名select name,SUM(scode) FROM student GROUP BY name ORDER BY SUM(scode) desc limit 33.查询平均分前三名select name,AVG(scode) from student GROUP BY name ORDER BY
+                      
+                    </p>
+                    
+                    <p class="pull-right readMore">
+                        <a href="/2017/01/12/sql语句题-关于-sum，avg，min/">Read More...</a>
+                    </p>
+                    
+                </div>
+                <div class="clearfix"></div>
+                <hr class="nogutter">
+            </div>
+        </div>
+        
+        <nav class="pagination" role="pagination">
+          
+          
+        </nav>
     </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/02/12/linux安装memcache以及分布式缓存/">linux安装memcache以及分布式缓存</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/12/curl模拟/">curl模拟</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/12/php通过拓展ssh2控制linux/"> php通过拓展ssh2控制linux</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/">CentOS 7安装Etherpad(在线协作编辑)</a>
-          </li>
-        
-          <li>
-            <a href="/2017/02/11/我的blog/">我的blog</a>
-          </li>
-        
-      </ul>
+</section>
+<section id="statement">
+    <div class="container text-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row">
+            <p>虽然还没想好写点什么，但是总觉得这里放句话比较和谐。</p>
+        </div>
     </div>
-  </div>
+</section>
+<!-- ============================ END Content =========================== -->
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2017 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By John Doe. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+
+    resizeHero();
+
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$('#intro').find('img').each(function(){
+  var alt = this.alt;
 
+  if (alt){
+    $(this).after('<span class="caption" style="display:none">' + alt + '</span>');
+  }
 
-<script src="/js/script.js"></script>
+  $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox" rel="gallery" />');
+});
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
 
-  </div>
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      (function(){
+        console.log('font');
+        var getCss = function(path) {
+          var head = document.getElementsByTagName('head')[0];
+          link = document.createElement('link');
+          link.href = path;
+          link.rel = 'stylesheet';
+          link.type = 'text/css';
+          head.appendChild(link);
+        };
+        getCss('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+        getCss('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+      })();
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
 </body>
 </html>
