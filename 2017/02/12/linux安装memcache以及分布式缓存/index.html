@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>linux安装memcache以及分布式缓存 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="安装 Memcached自动安装Ubuntu/Debiansudo apt-get install memcachedRedhat/Fedora/Centosyum install memcachedFreeBSDportmaster databases/memcached源代码安装从其官方网站（http://memcached.org）下载memcached最新版本。wget http://me">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux安装memcache以及分布式缓存">
+<meta property="og:url" content="http://yoursite.com/2017/02/12/linux安装memcache以及分布式缓存/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="安装 Memcached自动安装Ubuntu/Debiansudo apt-get install memcachedRedhat/Fedora/Centosyum install memcachedFreeBSDportmaster databases/memcached源代码安装从其官方网站（http://memcached.org）下载memcached最新版本。wget http://me">
+<meta property="og:updated_time" content="2017-02-12T12:03:04.702Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="linux安装memcache以及分布式缓存">
+<meta name="twitter:description" content="安装 Memcached自动安装Ubuntu/Debiansudo apt-get install memcachedRedhat/Fedora/Centosyum install memcachedFreeBSDportmaster databases/memcached源代码安装从其官方网站（http://memcached.org）下载memcached最新版本。wget http://me">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-linux安装memcache以及分布式缓存" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/12/linux安装memcache以及分布式缓存/" class="article-date">
+  <time datetime="2017-02-12T12:02:26.000Z" itemprop="datePublished">2017-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      linux安装memcache以及分布式缓存
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>安装 Memcached<br>自动安装<br>Ubuntu/Debian<br>sudo apt-get install memcached<br>Redhat/Fedora/Centos<br>yum install memcached<br>FreeBSD<br>portmaster databases/memcached<br>源代码安装<br>从其官方网站（<a href="http://memcached.org）下载memcached最新版本。" target="_blank" rel="external">http://memcached.org）下载memcached最新版本。</a><br>wget <a href="http://memcached.org/latest" target="_blank" rel="external">http://memcached.org/latest</a>                    下载最新版本</p>
+<p>tar -zxvf memcached-1.x.x.tar.gz                    解压源码</p>
+<p>cd memcached-1.x.x                                  进入目录</p>
+<p>./configure –prefix=/usr/local/memcached           配置</p>
+<p>make &amp;&amp; make test                                   编译</p>
+<p>sudo make install                                   安装<br>Memcached 运行<br>Memcached命令的运行：<br>$ /usr/local/memcached/bin/memcached -h                           命令帮助<br>注意：如果使用自动安装 memcached 命令位于 /usr/local/bin/memcached。<br>启动选项：<br>-d是启动一个守护进程；<br>-m是分配给Memcache使用的内存数量，单位是MB；<br>-u是运行Memcache的用户；<br>-l是监听的服务器IP地址，可以有多个地址；<br>-p是设置Memcache监听的端口，，最好是1024以上的端口；<br>-c是最大运行的并发连接数，默认是1024；<br>-P是设置保存Memcache的pid文件。<br>（1）作为前台程序运行：<br>从终端输入以下命令，启动memcached:<br>/usr/local/memcached/bin/memcached -p 11211 -m 64m -vv</p>
+<p>slab class   1: chunk size     88 perslab 11915</p>
+<p>slab class   2: chunk size    112 perslab  9362</p>
+<p>slab class   3: chunk size    144 perslab  7281</p>
+<p>中间省略</p>
+<p>slab class  38: chunk size 391224 perslab     2</p>
+<p>slab class  39: chunk size 489032 perslab     2</p>
+<p>&lt;23 server listening</p>
+<p>&lt;24 send buffer was 110592, now 268435456</p>
+<p>&lt;24 server listening (udp)</p>
+<p>&lt;24 server listening (udp)</p>
+<p>&lt;24 server listening (udp)</p>
+<p>&lt;24 server listening (udp)<br>这里显示了调试信息。这样就在前台启动了memcached，监听TCP端口11211，最大内存使用量为64M。调试信息的内容大部分是关于存储的信息。<br>（2）作为后台服务程序运行：</p>
+<h1 id="usr-local-memcached-bin-memcached-p-11211-m-64m-d"><a href="#usr-local-memcached-bin-memcached-p-11211-m-64m-d" class="headerlink" title="/usr/local/memcached/bin/memcached -p 11211 -m 64m -d"></a>/usr/local/memcached/bin/memcached -p 11211 -m 64m -d</h1><p>或者</p>
+<p>/usr/local/memcached/bin/memcached-d-m64M-u<br> root-l192.168.0.200-p11211-c256-P/tmp/memcached.pid</p>
+<p>ps：开启memcache多服务时不能用root用户 </p>
+<p>/usr/local/memcached/bin/memcached -u nobody -p 11211 -m 64m -d<br>分布式缓存测试<br>新建set.php</p>
+<p>新建get.php</p>
+<p>分别连接三个服务器结果<br>11211</p>
+<p>11213</p>
+<p>11214</p>
+<p>三个服务端存入了不同的值 that is ok！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/12/linux安装memcache以及分布式缓存/" data-id="ciz2mgit60003pmmqqsne1y11" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/12/curl模拟/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">curl模拟</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/12/linux安装memcache以及分布式缓存/">linux安装memcache以及分布式缓存</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/12/curl模拟/">curl模拟</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/12/php通过拓展ssh2控制linux/"> php通过拓展ssh2控制linux</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/">CentOS 7安装Etherpad(在线协作编辑)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/11/我的blog/">我的blog</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
