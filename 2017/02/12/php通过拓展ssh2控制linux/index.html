@@ -3,14 +3,18 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo</title>
+  <title> php通过拓展ssh2控制linux | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="注意：我们用PHP来控制Linux，PHP环境可以在windows也可以在Linux，但是我们要控制的机器是一台linux（被控制的linux关闭selinux和firewalld）。如果php在linux，不会安装没关系，可以参考安装lamp教程地址：  http://blog.csdn.NET/zph1234/article/details/51248124然后我们的php环境要想实现控制li">
+<meta property="og:type" content="article">
+<meta property="og:title" content=" php通过拓展ssh2控制linux">
+<meta property="og:url" content="http://yoursite.com/2017/02/12/php通过拓展ssh2控制linux/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="注意：我们用PHP来控制Linux，PHP环境可以在windows也可以在Linux，但是我们要控制的机器是一台linux（被控制的linux关闭selinux和firewalld）。如果php在linux，不会安装没关系，可以参考安装lamp教程地址：  http://blog.csdn.NET/zph1234/article/details/51248124然后我们的php环境要想实现控制li">
+<meta property="og:updated_time" content="2017-02-12T11:57:48.209Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content=" php通过拓展ssh2控制linux">
+<meta name="twitter:description" content="注意：我们用PHP来控制Linux，PHP环境可以在windows也可以在Linux，但是我们要控制的机器是一台linux（被控制的linux关闭selinux和firewalld）。如果php在linux，不会安装没关系，可以参考安装lamp教程地址：  http://blog.csdn.NET/zph1234/article/details/51248124然后我们的php环境要想实现控制li">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -59,9 +63,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-php通过拓展ssh2控制linux" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-php通过拓展ssh2控制linux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/02/12/php通过拓展ssh2控制linux/" class="article-date">
   <time datetime="2017-02-12T11:56:56.000Z" itemprop="datePublished">2017-02-12</time>
@@ -74,8 +76,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/12/php通过拓展ssh2控制linux/"> php通过拓展ssh2控制linux</a>
+    <h1 class="article-title" itemprop="name">
+       php通过拓展ssh2控制linux
     </h1>
   
 
@@ -150,147 +152,19 @@ else
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-CentOS-7安装Etherpad-在线协作编辑" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/" class="article-date">
-  <time datetime="2017-02-11T08:57:46.000Z" itemprop="datePublished">2017-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/">CentOS 7安装Etherpad(在线协作编辑)</a>
-    </h1>
+    <a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">CentOS 7安装Etherpad(在线协作编辑)</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Etherpad 是一个线上共制平台，是基于网络的实时合作文档编辑器，三、四个人可以坐在自己电脑前，同时对一份文档修改，也同时能看到其他人的修改。</p>
-<p>CentOS 7 安装 Etherpad</p>
-<p>1、先安装一些工具</p>
-<h1 id="yum-install-curl-vim-gcc-c-make"><a href="#yum-install-curl-vim-gcc-c-make" class="headerlink" title="yum install curl vim gcc-c++ make"></a>yum install curl vim gcc-c++ make</h1><p>2、安装MariaDB(mysql也是可以的)</p>
-<h1 id="yum-install-mariadb-server"><a href="#yum-install-mariadb-server" class="headerlink" title="yum install mariadb-server"></a>yum install mariadb-server</h1><p>启动MariaDB服务：</p>
-<h1 id="systemctl-start-mariadb-service"><a href="#systemctl-start-mariadb-service" class="headerlink" title="systemctl start mariadb.service"></a>systemctl start mariadb.service</h1><h1 id="systemctl-enable-mariadb-service"><a href="#systemctl-enable-mariadb-service" class="headerlink" title="systemctl enable mariadb.service"></a>systemctl enable mariadb.service</h1><p>运行MariaDB初始化脚本：</p>
-<h1 id="mysql-secure-installation"><a href="#mysql-secure-installation" class="headerlink" title="mysql_secure_installation"></a>mysql_secure_installation</h1><p>Mariadb初始密码为空；</p>
-<p>3、为Etherpad创建一个数据库和用户</p>
-<h1 id="mysql-u-root-p"><a href="#mysql-u-root-p" class="headerlink" title="mysql -u root -p"></a>mysql -u root -p</h1><p>MariaDB [(none)]&gt; CREATE DATABASE etherpad;<br>MariaDB [(none)]&gt; GRANT ALL PRIVILEGES ON etherpad.* TO ‘etherpad’@’localhost’ IDENTIFIED BY ‘test1234’;<br>MariaDB [(none)]&gt; FLUSH PRIVILEGES;<br>MariaDB [(none)]&gt; \q<br>创建数据库etherpad；用户etherpad，密码test1234。</p>
-<p>4、安装Node.js</p>
-<h1 id="curl-sL-https-rpm-nodesource-com-setup-sudo-bash"><a href="#curl-sL-https-rpm-nodesource-com-setup-sudo-bash" class="headerlink" title="curl -sL https://rpm.nodesource.com/setup | sudo bash -"></a>curl -sL <a href="https://rpm.nodesource.com/setup" target="_blank" rel="external">https://rpm.nodesource.com/setup</a> | sudo bash -</h1><h1 id="yum-install-nodejs"><a href="#yum-install-nodejs" class="headerlink" title="yum install nodejs"></a>yum install nodejs</h1><p>查看nodejs版本：</p>
-<h1 id="node-–version"><a href="#node-–version" class="headerlink" title="node –version"></a>node –version</h1><p>5、创建一个Linux用户</p>
-<h1 id="adduser-–home-opt-etherpad-–shell-bin-bash-etherpad"><a href="#adduser-–home-opt-etherpad-–shell-bin-bash-etherpad" class="headerlink" title="adduser –home /opt/etherpad –shell /bin/bash etherpad"></a>adduser –home /opt/etherpad –shell /bin/bash etherpad</h1><h1 id="install-d-m-755-o-etherpad-g-etherpad-opt-etherpad"><a href="#install-d-m-755-o-etherpad-g-etherpad-opt-etherpad" class="headerlink" title="install -d -m 755 -o etherpad -g etherpad /opt/etherpad"></a>install -d -m 755 -o etherpad -g etherpad /opt/etherpad</h1><p>6、安装Etherpad<br>切换到新用户：</p>
-<h1 id="su-etherpad"><a href="#su-etherpad" class="headerlink" title="su - etherpad"></a>su - etherpad</h1><p>使用git clone源码：<br>$ cd<br>$ git clone <a href="https://github.com/ether/etherpad-lite" target="_blank" rel="external">https://github.com/ether/etherpad-lite</a><br>创建配置文件：<br>$ cp ~/etherpad-lite/settings.json.template ~/etherpad-lite/settings.json<br>编辑settings.json文件：<br>$ sudo vim ~/etherpad-lite/settings.json<br>如果你要使用Nginx做反向代理，把“ip”: “0.0.0.0” 改为 “ip”: “127.0.0.1”，trustProxy设置为true。<br>注释掉”dbType” : “dirty”。<br>数据库配置：<br>“dbType” : “mysql”,<br>“dbSettings” : {<br>“user”    : “etherpad”,<br>“host”    : “localhost”,<br>“password”: “test1234”,<br>“database”: “etherpad”<br>},<br>添加管理员用户：<br>“users”: {<br>“admin”: {<br>“password”: “admin123”,<br>“is_admin”: true<br>}<br>},<br>保存退出。<br>安装依赖：<br>$ ~/etherpad-lite/bin/installDeps.sh<br>启动Etherpad：<br>$ ~/etherpad-lite/bin/run.sh</p>
-<p>使用浏览器访问：your_server_ip:9001</p>
-<p>创建新文档（New Pad），（链接：<a href="http://your_ip:9001/p/r5Lc37e42P）：" target="_blank" rel="external">http://your_ip:9001/p/r5Lc37e42P）：</a></p>
-<p>把链接发送给合作伙伴，协作编写同一个文档。每个人编辑的文本会使用不用的颜色，非常方便区分。</p>
-<p>7、后续配置<br>把etherpad注册为系统服务<br>使用Nginx做反向代理（域名-&gt;127.0.0.1:9001）</p>
-<p>本文永久更新地址：<a href="http://www.linuxdiyf.com/linux/22391.html" target="_blank" rel="external">http://www.linuxdiyf.com/linux/22391.html</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/" data-id="ciz2m9t1t0000n4mqi3ckfu7q" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
-    <article id="post-我的blog" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/11/我的blog/" class="article-date">
-  <time datetime="2017-02-11T08:50:30.000Z" itemprop="datePublished">2017-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/11/我的blog/">我的blog</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>开始喽</p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/我的blog/" data-id="ciz2m9t3a0003n4mq4b4zvwmu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2017/02/11/hello-world/" class="article-date">
-  <time datetime="2017-02-11T08:13:38.214Z" itemprop="datePublished">2017-02-11</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/11/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/hello-world/" data-id="ciz2m9t2u0001n4mqtm5ike2p" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 </section>
         
