@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>curl模拟 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="header(‘content-type:text/html;charset=utf-8’);function curlPost($url,$data,$method){    $ch = curl_init();   //1.初始化    curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址    curl_setopt($ch, CURLOPT_CUSTO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="curl模拟">
+<meta property="og:url" content="http://yoursite.com/2017/02/12/curl模拟/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="header(‘content-type:text/html;charset=utf-8’);function curlPost($url,$data,$method){    $ch = curl_init();   //1.初始化    curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址    curl_setopt($ch, CURLOPT_CUSTO">
+<meta property="og:updated_time" content="2017-02-12T12:00:21.344Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="curl模拟">
+<meta name="twitter:description" content="header(‘content-type:text/html;charset=utf-8’);function curlPost($url,$data,$method){    $ch = curl_init();   //1.初始化    curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址    curl_setopt($ch, CURLOPT_CUSTO">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-curl模拟" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/12/curl模拟/" class="article-date">
+  <time datetime="2017-02-12T11:59:24.000Z" itemprop="datePublished">2017-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      curl模拟
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>header(‘content-type:text/html;charset=utf-8’);<br>function curlPost($url,$data,$method){<br>    $ch = curl_init();   //1.初始化<br>    curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址<br>    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);//3.请求方式<br>    //4.参数如下<br>    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);//https<br>    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>    curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)’);//模拟浏览器<br>    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>    curl_setopt($ch, CURLOPT_AUTOREFERER, 1);<br>        curl_setopt($ch, CURLOPT_HTTPHEADER,array(‘Accept-Encoding: gzip, deflate’));//gzip解压内容<br>        curl_setopt($ch, CURLOPT_ENCODING, ‘gzip,deflate’);  </p>
+<pre><code>if($method==&quot;POST&quot;){//5.post方式的时候添加数据  
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  
+}  
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
+$tmpInfo = curl_exec($ch);//6.执行  
+
+if (curl_errno($ch)) {//7.如果出错  
+    return curl_error($ch);  
+}  
+curl_close($ch);//8.关闭  
+return $tmpInfo;  
+</code></pre><p>}<br>$data=array(‘name’ =&gt; ‘1234’);<br>$url=”<a href="http://www.sohu.com/" target="_blank" rel="external">http://www.sohu.com/</a>“;  </p>
+<p>$method=”GET”;<br>$file=curlPost($url,$data,$method);<br>$file=mb_convert_encoding($file,’UTF-8’,’GBK’);<br>echo $file;  </p>
+<p>当cookie认证登陆的时候<br>[php] view plain copy  在CODE上查看代码片派生到我的代码片<br>&lt;?php<br>    $cookie_file = tempnam(‘./temp’,’cookie’);<br>    function weixinPost($url,$data,$method,$setcooke=false,$cookie_file=false){<br>        $ch = curl_init();   //1.初始化<br>        curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址<br>        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);//3.请求方式<br>        //4.参数如下<br>        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);<br>        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>        curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)’);<br>        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>        curl_setopt($ch, CURLOPT_AUTOREFERER, 1);  </p>
+<pre><code>    if($method==&quot;POST&quot;){//5.post方式的时候添加数据     
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  
+    }  
+    if($setcooke==true){  
+        curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_file);  
+    }else{  
+        curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_file);  
+    }  
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
+    $tmpInfo = curl_exec($ch);//6.执行  
+
+    if (curl_errno($ch)) {//7.如果出错  
+        return curl_error($ch);  
+    }  
+    curl_close($ch);//8.关闭  
+    return $tmpInfo;  
+}  
+$data=array(&apos;username&apos; =&gt; &apos;***&apos;,&apos;password&apos;=&gt;&apos;***&apos;);  
+$url=&quot;http://www.xinxinj.com/login.php&quot;;  
+$method=&quot;POST&quot;;  
+$file=weixinPost($url,$data,$method,true,$cookie_file);  
+echo $file;  
+
+$url=&quot;http://www.xinxinj.com/admin.php&quot;;  
+$method=&quot;GET&quot;;  
+$file=weixinPost($url,$data,$method,false,$cookie_file);  
+echo $file;  
+</code></pre><p>?&gt;  </p>
+<p>如果上述还是无法解决，那么采用以下方案<br>[php] view plain copy  在CODE上查看代码片派生到我的代码片<br>$ch = curl_init();<br>$url = ‘<strong><em>*</em></strong>‘;<br>$header = array(<br>‘cookie:<strong><em>**</em></strong>‘<br>);<br>// 添加apikey到header<br>curl_setopt($ch, CURLOPT_HTTPHEADER  , $header);<br>//curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);<br>curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0’);<br>curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>curl_setopt($ch, CURLOPT_AUTOREFERER, 1);<br>// 执行HTTP请求<br>curl_setopt($ch , CURLOPT_URL , $url);<br>$res = curl_exec($ch);<br>var_dump($res);    </p>
+<p>上面的$header中的数组中cookie的内容是现在浏览器登录，然后打开控制台，把cookie的信息粘贴进来</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/12/curl模拟/" data-id="ciz2md5vm0001o5mqbvgq660a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/02/12/php通过拓展ssh2控制linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"> php通过拓展ssh2控制linux</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">February 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/02/12/curl模拟/">curl模拟</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/12/php通过拓展ssh2控制linux/"> php通过拓展ssh2控制linux</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/">CentOS 7安装Etherpad(在线协作编辑)</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/11/我的blog/">我的blog</a>
+          </li>
+        
+          <li>
+            <a href="/2017/02/11/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>

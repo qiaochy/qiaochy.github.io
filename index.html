@@ -61,6 +61,87 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-curl模拟" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/02/12/curl模拟/" class="article-date">
+  <time datetime="2017-02-12T11:59:24.000Z" itemprop="datePublished">2017-02-12</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/02/12/curl模拟/">curl模拟</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>header(‘content-type:text/html;charset=utf-8’);<br>function curlPost($url,$data,$method){<br>    $ch = curl_init();   //1.初始化<br>    curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址<br>    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);//3.请求方式<br>    //4.参数如下<br>    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);//https<br>    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>    curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)’);//模拟浏览器<br>    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>    curl_setopt($ch, CURLOPT_AUTOREFERER, 1);<br>        curl_setopt($ch, CURLOPT_HTTPHEADER,array(‘Accept-Encoding: gzip, deflate’));//gzip解压内容<br>        curl_setopt($ch, CURLOPT_ENCODING, ‘gzip,deflate’);  </p>
+<pre><code>if($method==&quot;POST&quot;){//5.post方式的时候添加数据  
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  
+}  
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
+$tmpInfo = curl_exec($ch);//6.执行  
+
+if (curl_errno($ch)) {//7.如果出错  
+    return curl_error($ch);  
+}  
+curl_close($ch);//8.关闭  
+return $tmpInfo;  
+</code></pre><p>}<br>$data=array(‘name’ =&gt; ‘1234’);<br>$url=”<a href="http://www.sohu.com/" target="_blank" rel="external">http://www.sohu.com/</a>“;  </p>
+<p>$method=”GET”;<br>$file=curlPost($url,$data,$method);<br>$file=mb_convert_encoding($file,’UTF-8’,’GBK’);<br>echo $file;  </p>
+<p>当cookie认证登陆的时候<br>[php] view plain copy  在CODE上查看代码片派生到我的代码片<br>&lt;?php<br>    $cookie_file = tempnam(‘./temp’,’cookie’);<br>    function weixinPost($url,$data,$method,$setcooke=false,$cookie_file=false){<br>        $ch = curl_init();   //1.初始化<br>        curl_setopt($ch, CURLOPT_URL, $url); //2.请求地址<br>        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $method);//3.请求方式<br>        //4.参数如下<br>        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);<br>        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);<br>        curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (compatible; MSIE 5.01; Windows NT 5.0)’);<br>        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>        curl_setopt($ch, CURLOPT_AUTOREFERER, 1);  </p>
+<pre><code>    if($method==&quot;POST&quot;){//5.post方式的时候添加数据     
+        curl_setopt($ch, CURLOPT_POSTFIELDS, $data);  
+    }  
+    if($setcooke==true){  
+        curl_setopt($ch, CURLOPT_COOKIEJAR, $cookie_file);  
+    }else{  
+        curl_setopt($ch, CURLOPT_COOKIEFILE, $cookie_file);  
+    }  
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);  
+    $tmpInfo = curl_exec($ch);//6.执行  
+
+    if (curl_errno($ch)) {//7.如果出错  
+        return curl_error($ch);  
+    }  
+    curl_close($ch);//8.关闭  
+    return $tmpInfo;  
+}  
+$data=array(&apos;username&apos; =&gt; &apos;***&apos;,&apos;password&apos;=&gt;&apos;***&apos;);  
+$url=&quot;http://www.xinxinj.com/login.php&quot;;  
+$method=&quot;POST&quot;;  
+$file=weixinPost($url,$data,$method,true,$cookie_file);  
+echo $file;  
+
+$url=&quot;http://www.xinxinj.com/admin.php&quot;;  
+$method=&quot;GET&quot;;  
+$file=weixinPost($url,$data,$method,false,$cookie_file);  
+echo $file;  
+</code></pre><p>?&gt;  </p>
+<p>如果上述还是无法解决，那么采用以下方案<br>[php] view plain copy  在CODE上查看代码片派生到我的代码片<br>$ch = curl_init();<br>$url = ‘<strong><em>*</em></strong>‘;<br>$header = array(<br>‘cookie:<strong><em>**</em></strong>‘<br>);<br>// 添加apikey到header<br>curl_setopt($ch, CURLOPT_HTTPHEADER  , $header);<br>//curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);<br>curl_setopt($ch, CURLOPT_USERAGENT, ‘Mozilla/5.0 (Macintosh; Intel Mac OS X 10.12; rv:50.0) Gecko/20100101 Firefox/50.0’);<br>curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);<br>curl_setopt($ch, CURLOPT_AUTOREFERER, 1);<br>// 执行HTTP请求<br>curl_setopt($ch , CURLOPT_URL , $url);<br>$res = curl_exec($ch);<br>var_dump($res);    </p>
+<p>上面的$header中的数组中cookie的内容是现在浏览器登录，然后打开控制台，把cookie的信息粘贴进来</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2017/02/12/curl模拟/" data-id="ciz2md5vm0001o5mqbvgq660a" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-php通过拓展ssh2控制linux" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2017/02/12/php通过拓展ssh2控制linux/" class="article-date">
@@ -144,7 +225,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/12/php通过拓展ssh2控制linux/" data-id="ciz2m9t330002n4mq6658opv7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/12/php通过拓展ssh2控制linux/" data-id="ciz2md5w00003o5mqrxz3yer1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -199,7 +280,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/" data-id="ciz2m9t1t0000n4mqi3ckfu7q" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/11/CentOS-7安装Etherpad-在线协作编辑/" data-id="ciz2md5uq0000o5mqozto07a2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +317,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/我的blog/" data-id="ciz2m9t3a0003n4mq4b4zvwmu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/11/我的blog/" data-id="ciz2md5w60004o5mqzq1h5hxj" class="article-share-link">Share</a>
       
       
     </footer>
@@ -281,7 +362,7 @@ else
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2017/02/11/hello-world/" data-id="ciz2m9t2u0001n4mqtm5ike2p" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2017/02/11/hello-world/" data-id="ciz2md5vt0002o5mqz1coze5r" class="article-share-link">Share</a>
       
       
     </footer>
@@ -319,6 +400,10 @@ else
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/02/12/curl模拟/">curl模拟</a>
+          </li>
         
           <li>
             <a href="/2017/02/12/php通过拓展ssh2控制linux/"> php通过拓展ssh2控制linux</a>
